@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card form-card">
+  <h2>Register</h2>
+  <p>You must have a valid invite code to create an account.</p>
+  <form method="post">
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+    <label>Password
+      <input type="password" name="password" minlength="8" required />
+    </label>
+    <label>Invite code
+      <input type="text" name="invite_code" required />
+    </label>
+    <button type="submit">Register</button>
+  </form>
+</section>
+{% endblock %}
