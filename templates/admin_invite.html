@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card form-card">
+  <h2>Admin invite portal</h2>
+  <p>Generate private invitation codes. Protect this page behind network/auth controls in production.</p>
+  <form method="post">
+    <label>Admin key
+      <input type="password" name="admin_key" required />
+    </label>
+    <label>Invite email (optional)
+      <input type="email" name="invited_email" placeholder="person@example.com" />
+    </label>
+    <button type="submit">Generate invite</button>
+  </form>
+
+  {% if generated_code %}
+    <p class="invite-output">New invite code: <code>{{ generated_code }}</code></p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h3>Recent invites</h3>
+  <ul class="messages">
+    {% for invite in invites %}
+      <li>
+        <div><strong>{{ invite['code'] }}</strong></div>
+        <div class="meta">Email: {{ invite['invited_email'] or 'Any email' }}</div>
+        <div class="meta">Used: {{ 'Yes' if invite['used_by'] else 'No' }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

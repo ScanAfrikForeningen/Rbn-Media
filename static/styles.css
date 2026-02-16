@@ -1,0 +1,131 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111;
+  background: #f5f7fb;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #1f3b8a;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+main {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #dde3ef;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-card form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+}
+
+button,
+.button {
+  background: #1f3b8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+}
+
+.button.secondary {
+  background: #5168af;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.inline {
+  display: inline;
+}
+
+.flashes {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.flashes li {
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.messages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.messages li {
+  border: 1px solid #e6eaf2;
+  border-radius: 8px;
+  padding: 0.65rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #5e6677;
+  margin-bottom: 0.25rem;
+}
+
+.invite-output {
+  background: #edf7ed;
+  border: 1px solid #b8d8b8;
+  padding: 0.5rem;
+  border-radius: 6px;
+}

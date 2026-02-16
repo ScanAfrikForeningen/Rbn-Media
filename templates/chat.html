@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card form-card">
+  <h2>Team chat</h2>
+  <form method="post">
+    <label>Message
+      <textarea name="body" rows="3" maxlength="500" placeholder="Write a message..." required></textarea>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<section class="card">
+  <h3>Recent messages</h3>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li>
+          <div class="meta">{{ message['email'] }} • {{ message['created_at'] }}</div>
+          <div>{{ message['body'] }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No messages yet.</p>
+  {% endif %}
+</section>
+{% endblock %}

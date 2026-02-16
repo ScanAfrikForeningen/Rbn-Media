@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Invitation-only chat MVP</h2>
+  <p>
+    Register with your email address and a private invite code. Without a valid invite, account creation is blocked.
+  </p>
+  <div class="actions">
+    <a class="button" href="{{ url_for('register') }}">Create account</a>
+    <a class="button secondary" href="{{ url_for('login') }}">Sign in</a>
+    <a class="button secondary" href="{{ url_for('admin_invite') }}">Admin invite portal</a>
+  </div>
+</section>
+{% endblock %}
